@@ -1,0 +1,125 @@
+.after {
+	padding: 50px 0px;
+	position: relative;
+	background-color: var(--light-color);
+	font-family: "Geometria";
+	@include mobile {
+		padding: 30px 0px;
+	}
+   
+	&__sub-title {
+		text-align: center;
+	}
+}
+.slider-after {
+	height: 680px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	box-shadow:0px 5px 14px 2px rgba(34, 60, 80, 0.1);
+	@include small-mobile {
+		height: 480px;
+	}
+	&__slide {
+		height: 100%;
+		overflow: hidden;
+		border-radius: 5px;
+		
+		
+	}
+	&__bg {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		background-position: center;
+		background-size: cover;
+		
+		
+	}
+	&__arrows {
+		position: relative;
+		bottom: 20px;
+	}
+	&__prev::after,
+	&__next::after {
+		font-size: 25px;
+		color: #383838;
+	}
+	
+}
+
+
+.slider-after-in {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	&__slide {
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		
+	}	
+}
+
+.slider-after-in__slide:first-child ::before {
+	position: absolute;
+	content: '';
+	width: 45px;
+	height: 45px;
+	background-color: rgb(209, 158, 81);
+	right: -22px;
+	border-radius: 50%;
+	z-index: 8;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.slider-after-in__slide:first-child ::after {
+	background-image: url(../../../images/src/svg/arrow.svg);
+	background-size: cover;
+	top: 50%;
+	transform: translateY(-50%);
+	right:-10px;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	content: '';
+	z-index: 9;
+
+}
+.slider-after-in__slide:last-child ::before {
+	position: fixed;
+	content: '';
+	width: 45px;
+	height: 45px;
+	background-color: rgb(209, 158, 81);
+	left: -22px;
+	border-radius: 50%;
+	z-index: 8;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slider-after-in__slide:last-child ::after {
+	background-image: url(../../../images/src/svg/arrow-right.svg);
+	background-size: cover;
+	
+	top: 50%;
+	transform: translateY(-50%);
+	left:-10px;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	content: '';
+	z-index: 9;
+
+}
+
+@media  (max-height: 420px) {
+	.after {
+		padding: 30px 0px;
+	}
+	.slider-after {
+		max-height: 370px;
+	}
+}

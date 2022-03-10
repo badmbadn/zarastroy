@@ -1,0 +1,88 @@
+.price-button {
+    padding: 0 15px;
+    border-radius: 25px;
+    line-height: 50px;
+    height: 50px;
+    letter-spacing: .5px;
+    background-color: var(--color-yellow);
+    @include adaptiv-font(18,16);
+    color:#fff;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 40px;
+    transition: all .2s ease-out;
+    font-family: "Raleway";
+    font-weight: 500;
+    transition:all .5s ease-out ;
+    &__animate {
+        transition-delay: .7s;
+       // color: rgb(59, 6, 46);
+    }
+    .hero-slider__slide.swiper-slide-active .price-button__animate {
+        transition-delay: .4s;
+    }
+  
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+    }
+    &:hover,&:active,&:focus {
+        background-color:var(--color-beige); 
+        color: rgb(59, 6, 46);
+      
+    }
+}
+.btn {
+    line-height: 50px;
+    height: 50px;
+    padding: 0 15px;
+    text-align: center;
+    border-radius: 25px;
+    text-transform: uppercase;
+    @include adaptiv-font(18,16);
+    max-width: 200px;
+    letter-spacing: .5px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Raleway";
+    
+}
+.btn-yellow {
+    background-color: var(--color-yellow);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    &:hover {
+        color:#fff;
+        background-color:var(--color-haki);
+    }
+}
+.btn-modal {
+    background-color:var(--color-beige);
+    color:#4c1302;
+}
+.btn-beige {
+    background-color: var(--color-beige);
+    color:#4c1302;
+    &:hover {
+        background-color: var(--color-yellow);
+    }
+
+}
+
+@media  (max-height: 420px) {
+    .price-button {
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    }
+    .btn {
+        line-height: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}

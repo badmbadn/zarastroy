@@ -1,0 +1,38 @@
+.header-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    &__link:not(:last-child) {
+       margin-right: 35px;
+        
+   }
+   &--nav {
+       display: none;
+       @include for-desktop {
+           display: flex;
+       }
+   }
+   &__link {
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+   }
+}
+.contacts-link {
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing:.4px;
+    background-size: 40px 40px;
+    background-position: left center;
+    padding-left: 55px;
+    
+    &--mail {
+        background-image: url(../../../images/src/svg/mail.svg);
+    }
+    &--call {
+        background-image: url(../../../images/src/svg/phone.svg);
+    }
+}

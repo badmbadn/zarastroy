@@ -1,0 +1,37 @@
+.modal {
+    z-index: 15;
+    position: absolute;
+    &__container {
+        background-color: #313130;
+        box-shadow: 0 0 0 8px rgba(rgb(172, 172, 172), .4);
+        border-radius: 8px;
+    }
+    &__title {
+        color: rgb(255, 251, 251);
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    &__close {
+        color: rgb(54, 54, 54);
+        opacity: .25;
+        transition: opacity .3s ease-out;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__input {
+        margin-bottom: 20px;
+     
+    }
+    &__footer {
+        text-align: center;
+    }
+  
+}
+.form-input {
+    &::placeholder {
+        color:var(--color-modal);
+    }
+}

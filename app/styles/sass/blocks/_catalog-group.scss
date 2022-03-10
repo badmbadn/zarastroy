@@ -1,0 +1,110 @@
+.accordion {
+    padding-bottom: 10px;
+    font-family: "Raleway";
+    box-sizing: content-box;
+  
+   
+    &__control {
+        width: 100%;
+        max-height: 25px;
+        padding-top: 1px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+       align-items: center;
+        background-color: rgb(253, 253, 253);
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+        transition: background-color .4s ease, color .4s ease-in;
+        border-radius: 7px;
+        &:hover {
+            color: var(--deep);
+            background-color: var(--color-hover-tabs);
+        }
+    }
+    &__title {
+        font-weight: 500;
+    }
+    &__content {
+        position: relative;
+        font-size: 14px;
+        padding:0px 5px 0px 27px ;
+        letter-spacing: .5px;
+        max-height:0 ;
+        opacity: 0;
+        color: var(--dark);
+        visibility: hidden;
+        will-change: max-height;
+        box-sizing: content-box;
+     
+        transition: all .3s ease;
+      
+
+    }
+    &__text {
+        margin: 0;
+        font-size: 15px;
+        position: relative;
+        transition: all .3s ease;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.5);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            
+    
+        }
+    }
+    &__icon {
+        position: relative;
+        right: 10px;
+       // margin-top: -5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;  
+        &::after {
+            content: '';
+            position: absolute;
+            background-image: url(../../../images/src/svg/arrow-tabs.svg);
+            background-position:center;
+            background-size: cover;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 22px;
+            height: 22px;
+            background-repeat: no-repeat;
+            fill:black;
+            transition: all .7s ease;
+        }
+    }
+}
+.open .accordion__control {
+    background-color: var(--color-bej);
+    color:var(--dark);
+  //  border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.open .accordion__content {
+   opacity: 1;
+   padding:0px 5px 10px 10px;
+   margin-bottom: 5px;
+   visibility: visible;
+  // vertical-align: top;
+}
+.open .accordion__icon {
+    transform: rotate(180deg);
+}
+.open .accordion__text {
+    margin-bottom: 8px;
+    padding-left: 15px;
+}
+.open .accordion__text:last-child {
+    margin-bottom: 10px;
+}

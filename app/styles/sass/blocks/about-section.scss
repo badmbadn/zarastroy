@@ -1,0 +1,112 @@
+.about {
+    &__bg {
+        position: absolute;
+       
+        left: 0;
+        top: 0;
+        width: 160%;
+        height: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #202320;
+            opacity: .7;
+           z-index: 1;
+            }
+    }
+}
+.about-slider {
+   
+    height: 600px;
+  
+    position: relative;
+   
+    &__slide {
+        height: 100%;
+        overflow: hidden;
+    }
+    &__arrows {
+        position: relative;
+        top: -90%;
+    }
+    &__next::after,
+    &__prev::after {
+        font-size: 20px;
+        color: rgb(223, 223, 223);
+    }
+
+    
+   
+}
+.slider-container {
+    position: relative;
+    z-index: 100;
+   
+}
+.about-slide {
+    margin: 0 auto;
+    padding: 80px 20px 20px ;
+    max-width: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:var(--light-color);
+    font-family: "OpenSans";
+    &__title {
+        @include adaptiv-font(28,22);
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    &__descr {
+        font-weight: 500;
+        margin-bottom: 25px;
+        @include adaptiv-font(26,20);
+    }
+    &__text {
+        @include adaptiv-font(24,20);
+        line-height: 1.4;
+    }
+    &__img {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        fill:#ff8600;
+        object-fit: cover;
+        margin-bottom: 35px;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media  (max-height: 420px) {
+    .about-slider {
+        max-height: 400px;
+    }
+    .about-slide {
+        padding: 30px 10px 10px;
+        &__title {
+            @include adaptiv-font(22,18);
+            margin-bottom: 15px;
+        }
+        &__descr {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+:root {
+    // base
+    
+    --content-width: 1170px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+  
+  
+    // colors
+    --light-color: rgba(255,255,255, .8);
+    --color-smooth-white: rgba(255,255,255, .7);
+    --dark: #202328;
+    --dark-tabs:#6F7A8B;
+   
+    --deep: #171A1A;
+      --dark-header: #7a8597;
+    --color-yellow:#ddaa38;
+    --color-beige:beige;
+    --color-nava:#fdeace;
+    --color-hover-tabs:rgb(202, 163, 71);
+    --color-modal:#fffeeb;
+    --color-bej:rgb(255, 246, 191);
+    --color-haki:rgb(76, 114, 76);
+  }
+  
